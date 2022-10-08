@@ -1,0 +1,33 @@
+<html>
+    {% load static %}
+    <head>
+        <link rel="stylesheet" href="{% static 'newlogin.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Login</title>
+    </head>
+    <body class="body">
+           <center>
+            <div class="log" >
+                {% include 'messages.html' %}
+            <h3 class="text-dark">Create a new account</h3>
+       <hr>
+              
+          <form action="/user/newlogin/" method="post">
+            {% csrf_token %}
+           <input type="text" placeholder="Username" name="username" required><br><br>
+           <input type="email" placeholder="Email" name="email" required><br><br>
+           <input type="password" placeholder="Password" name="password" required><br><br>
+           <input type="password" placeholder="Confirm Password" name="password2" required><br><br>
+           <input type="submit" value="Create" class="btn-primary"><br>
+       </form>
+              <hr>
+               <h6>You have already an account<span><a class="text-primary m-2" href='login/'><u>Log In</u></a></span></h6>
+                
+            </div> 
+           </center>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+           </body>
+            </body>
+</html>

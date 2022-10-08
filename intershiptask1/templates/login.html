@@ -1,0 +1,30 @@
+<html>
+    {% load static %}
+    
+    <head>
+        <link rel="stylesheet" href="{% static 'login.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+        <title>Login</title>
+    </head>
+    <body class="body">
+           <center>
+            <div class="log" >
+                {% include 'messages.html' %}
+            <h3 class="text-dark">Please Login First of all</h3>
+       <hr>
+              
+          <form action="login/" method="post">
+            {% csrf_token %}
+           <input type="text" placeholder="Username" name="username" required><br><br>
+           <input type="password" placeholder="Password" name="password" required><br><br>
+           <input type="submit" value="Login" class="btn-primary"><br>
+       </form>
+              <hr>
+               <h6>You don't have an account..! <span><a class="text-primary m-2" href='newlogin/'> <u>Create Now</u></a></span></h6>
+            </div> 
+           </center>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+            </body>
+</html>

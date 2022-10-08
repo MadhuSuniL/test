@@ -1,0 +1,20 @@
+<html>
+    {% load static %}
+    <head>
+        <link rel="stylesheet" href="{% static 'homecss.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+        <title>Login</title>
+    </head>
+    <body class="body">
+    <header class="head">
+       <button onclick="window.location.href='/user/logout/'" class="btn-danger" style="margin-top: 20px;font-size: 20px;margin-right: 2%">Logout</button>
+        <h5 class="text-light" style="float: right;margin-right: 2%;margin-top: 25px">{{request.user}}</h5>
+    </header>
+    {% include 'messages.html' %}
+       <br>
+        <h5 class="text-center" style="margin-top: 19%">Hello<span class="text-primary"><u></u> MadhuSunil2k22..!</u></span> You have successfully logged In.</h5>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </body>
+    </body>
+</html>
